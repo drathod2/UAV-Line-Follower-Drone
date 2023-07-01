@@ -1,0 +1,32 @@
+CC     = "C:\Program Files\MATLAB\R2023a\sys\lcc64\lcc64\bin\lcc64.exe"
+LD     = "C:\Program Files\MATLAB\R2023a\sys\lcc64\lcc64\bin\lcclnk64.exe"
+LIBCMD = "C:\Program Files\MATLAB\R2023a\sys\lcc64\lcc64\bin\lcclib64.exe"
+CFLAGS = -dll -noregistrylookup  -c -Zp8 -DLCC_WIN64 -DMATLAB_MEX_FILE -nodeclspec
+LDFLAGS = -s -dll -L"C:\Program Files\MATLAB\R2023a\sys\lcc64\lcc64\lib64" -entry LibMain -map sfun.map
+LIBFLAGS = 
+
+OBJECTS = \
+	"flightControlSystem_sfun.obj"\
+	"c1_flightControlSystem.obj"\
+	"flightControlSystem_sfun_registry.obj"\
+	"half_type.obj"\
+	"lccstub.obj"\
+	"c_mexapi_version.obj"\
+
+INCLUDE_PATH= -I"C:\Program Files\MATLAB\R2023a\extern\include"  -I"C:\Program Files\MATLAB\R2023a\simulink\include"  -I"C:\Program Files\MATLAB\R2023a\simulink\include\sf_runtime"  -I"C:\Program Files\MATLAB\R2023a\stateflow\c\mex\include"  -I"C:\Program Files\MATLAB\R2023a\rtw\c\src"  -I"C:\Users\siddh\Downloads\parrotMinidroneCompetitionThesisImp (2)\parrotMinidroneCompetitionSiddharth\work\slprj\_sfprj\flightControlSystem\_self\sfun\src"  -I"C:\Users\siddh\downloads\parrotminidronecompetitionthesisimp (2)\parrotminidronecompetitionsiddharth\work\slprj\_sfprj\flightcontrolsystem\_self\sfun\src"  -I"C:\Users\siddh\downloads\parrotminidronecompetitionthesisimp (2)\parrotminidronecompetitionsiddharth\work"  -I"C:\Users\siddh\downloads\parrotminidronecompetitionthesisimp (2)\parrotminidronecompetitionsiddharth\controller"  -I"C:\Program Files\MATLAB\R2023a\sys\lcc64\lcc64\include64" 
+ 
+
+flightControlSystem_sfun.mexw64 : $(MAKEFILE) $(OBJECTS)
+	$(LD) $(LDFLAGS) -o flightControlSystem_sfun.mexw64 @flightControlSystem_sfun.lmko
+flightControlSystem_sfun.obj :	"C:\Users\siddh\Downloads\parrotMinidroneCompetitionThesisImp (2)\parrotMinidroneCompetitionSiddharth\work\slprj\_sfprj\flightControlSystem\_self\sfun\src\flightControlSystem_sfun.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "C:\Users\siddh\Downloads\parrotMinidroneCompetitionThesisImp (2)\parrotMinidroneCompetitionSiddharth\work\slprj\_sfprj\flightControlSystem\_self\sfun\src\flightControlSystem_sfun.c"
+c1_flightControlSystem.obj :	"C:\Users\siddh\Downloads\parrotMinidroneCompetitionThesisImp (2)\parrotMinidroneCompetitionSiddharth\work\slprj\_sfprj\flightControlSystem\_self\sfun\src\c1_flightControlSystem.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "C:\Users\siddh\Downloads\parrotMinidroneCompetitionThesisImp (2)\parrotMinidroneCompetitionSiddharth\work\slprj\_sfprj\flightControlSystem\_self\sfun\src\c1_flightControlSystem.c"
+flightControlSystem_sfun_registry.obj :	"C:\Users\siddh\Downloads\parrotMinidroneCompetitionThesisImp (2)\parrotMinidroneCompetitionSiddharth\work\slprj\_sfprj\flightControlSystem\_self\sfun\src\flightControlSystem_sfun_registry.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "C:\Users\siddh\Downloads\parrotMinidroneCompetitionThesisImp (2)\parrotMinidroneCompetitionSiddharth\work\slprj\_sfprj\flightControlSystem\_self\sfun\src\flightControlSystem_sfun_registry.c"
+half_type.obj :	"C:\Users\siddh\Downloads\parrotMinidroneCompetitionThesisImp (2)\parrotMinidroneCompetitionSiddharth\work\slprj\_sfprj\flightControlSystem\_self\sfun\src\half_type.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "C:\Users\siddh\Downloads\parrotMinidroneCompetitionThesisImp (2)\parrotMinidroneCompetitionSiddharth\work\slprj\_sfprj\flightControlSystem\_self\sfun\src\half_type.c"
+lccstub.obj :	"C:\Program Files\MATLAB\R2023a\sys\lcc64\lcc64\mex\lccstub.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "C:\Program Files\MATLAB\R2023a\sys\lcc64\lcc64\mex\lccstub.c"
+c_mexapi_version.obj :	"C:\Program Files\MATLAB\R2023a\extern\version\c_mexapi_version.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "C:\Program Files\MATLAB\R2023a\extern\version\c_mexapi_version.c"
