@@ -32,5 +32,5 @@ To run this line follower algorithm, you need the following:
 
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=BZZOMT-J5b0
-" target="_blank"><img src="http://img.youtube.com/vi/BZZOMT-J5b0/0.jpg" 
+" target="_blank"><img src="https://youtu.be/0HNCLZ_FNcA" 
 alt="UAV Line Follower" width="240" height="180" border="10" /></a>
