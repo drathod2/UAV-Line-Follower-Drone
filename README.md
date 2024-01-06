@@ -31,6 +31,5 @@ To run this line follower algorithm, you need the following:
 - MATLAB with Simulink and Computer Vision Toolbox
 
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=BZZOMT-J5b0
-" target="_blank"><img src="https://youtu.be/0HNCLZ_FNcA" 
+<a href="https://youtu.be/0HNCLZ_FNcA" target="_blank"><img src="http://img.youtube.com/vi/BZZOMT-J5b0/0.jpg" 
 alt="UAV Line Follower" width="240" height="180" border="10" /></a>
